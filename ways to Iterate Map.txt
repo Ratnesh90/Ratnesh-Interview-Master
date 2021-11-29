@@ -1,3 +1,6 @@
+
+//Guys I have demonastreted all 6 posible ways to Iterate a Map.
+
 package com.ratnesh.methodreference;
 
 import java.util.Collection;
