@@ -12,9 +12,10 @@ public class MapIterationDemo {
 				 "Saurav","50",
 				 "Dhoni", "60",
 				 "Rahul", "60");
-		//1. First way 
+		//1. First way Simply print
 		System.out.println(scoreMap);
 		System.out.println("2. Using entrySet()................");
+		
 		//2. Using entrySet() of Map Interface
 		Set<Entry<String, String>> entrySet = scoreMap.entrySet();
 		for(Entry<String, String> entry:entrySet) {
@@ -38,11 +39,16 @@ public class MapIterationDemo {
 		 scoreMap.entrySet().stream().forEach((e)->{
 			 System.out.println(e.getKey()+ "= "+ e.getValue());
 		 });
+		 // 6. Using Enhanced for loop
+		 System.out.println("6. forEach() method with Stream API................");
+		   for (var entry : scoreMap.entrySet()) {
+			    System.out.println(entry.getKey() + "=" + entry.getValue());
+			}
 		 
-		 //6. Only values
+		 //7. Print Only Value of Map using values() of Collection
 		 
-		 Collection<String> score = scoreMap.values();
-		 System.out.println(score);
+		 Collection<String> scores = scoreMap.values();
+		 System.out.println(scores);
 	}
 
 }
