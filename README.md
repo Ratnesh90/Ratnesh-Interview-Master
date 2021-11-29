@@ -1,12 +1,7 @@
 # Ratnesh-Interview-Master
  
- 1. all possible ways to iterate over List.
- Answer: There are 7 ways you can iterate through List.
-Simple For loop.
-Enhanced For loop.
-Iterator.
-ListIterator.
-While loop.
-Iterable.forEach() util.
-Stream.forEach() util.
+ Guys Here i am creatin all most commonly asked Java interview Questions in 2021.
+ And i am trying to answer all this quetion up to Java 14. So you will get all update answer and ways to perform your task.
+ 
+ Kindly read, Practice and shre with yur friends.
 
