@@ -1,0 +1,48 @@
+package com.ratnesh.methodreference;
+
+import java.util.Collection;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class MapIterationDemo {
+
+	public static void main(String[] args) {
+		Map<String,String> scoreMap = Map.of("Schin", "100",
+				 "Saurav","50",
+				 "Dhoni", "60",
+				 "Rahul", "60");
+		//1. First way 
+		System.out.println(scoreMap);
+		System.out.println("2. Using entrySet()................");
+		//2. Using entrySet() of Map Interface
+		Set<Entry<String, String>> entrySet = scoreMap.entrySet();
+		for(Entry<String, String> entry:entrySet) {
+			System.out.println(entry.getKey()+" = "+ entry.getValue());
+			
+		}
+		//3. way using KeySet() of Map
+		System.out.println("3. Using KeySet()................");
+		Set<String> scoreKey = scoreMap.keySet();
+		 for(String key:scoreKey) {
+			 System.out.println(key + "=" + scoreMap.get(key));
+			
+		 }
+         //4. using forEach() method with Lambda expression
+		 System.out.println("4. forEach() method with Lambda................");
+		 scoreMap.forEach((player,score)->{
+			 System.out.println(player+ "=" + score);
+		 });
+		 //5.  using Stream API
+		 System.out.println("5. forEach() method with Stream API................");
+		 scoreMap.entrySet().stream().forEach((e)->{
+			 System.out.println(e.getKey()+ "= "+ e.getValue());
+		 });
+		 
+		 //6. Only values
+		 
+		 Collection<String> score = scoreMap.values();
+		 System.out.println(score);
+	}
+
+}
